@@ -39,6 +39,7 @@ sr.reveal(".skills-box", {
   reset: true,
 });
 
+sr.reveal(".row", { delay: 300 });
 srRight.reveal(".contact-info", {});
 
 // sr.reveal(".skills-box", { delay: 100 });
