@@ -1,12 +1,12 @@
 setTimeout(function () {
-  window.scrollTo(0, 1);
+    window.scrollTo(0, 1);
 }, 200);
 
 const sr = ScrollReveal({
-  origin: "top",
-  distance: "80px",
-  duration: 2000,
-  reset: true,
+    origin: "top",
+    distance: "80px",
+    duration: 2000,
+    reset: true,
 });
 /* -- HOME -- */
 sr.reveal(".featured-text-card", {});
@@ -24,23 +24,27 @@ sr.reveal(".top-header", {});
 
 /* -- ABOUT SKILLS & FORM BOX -- */
 
+sr.reveal(".text-area", {
+    origin: "right",
+});
+
 sr.reveal(".about-info", {
-  origin: "left",
-  distance: "80px",
-  delay: 100,
-  duration: 2000,
-  reset: true,
+    origin: "left",
+    distance: "80px",
+    delay: 100,
+    duration: 2000,
+    reset: true,
 });
 sr.reveal(".skills-box", {
-  origin: "right",
-  distance: "80px",
-  delay: 100,
-  duration: 2000,
-  reset: true,
+    origin: "right",
+    distance: "80px",
+    delay: 100,
+    duration: 2000,
+    reset: true,
 });
 
-sr.reveal(".row", { delay: 300 });
-srRight.reveal(".contact-info", {});
+sr.reveal(".contact-info", {
+    origin: "left",
+});
 
-// sr.reveal(".skills-box", { delay: 100 });
 sr.reveal(".form-control", { delay: 100 });
