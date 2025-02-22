@@ -58,3 +58,9 @@ function scrollActive() {
   });
 }
 window.addEventListener("scroll", scrollActive);
+
+/* ------------ ALERT BUTTON CV ----------*/
+
+function alertBtn() {
+  alert("Sorry, it is not uploaded yet :(\nYou can check my social links");
+}
