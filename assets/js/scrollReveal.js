@@ -1,3 +1,4 @@
+// ---------- active scrollReveal animations -------------
 setTimeout(function () {
   window.scrollTo(0, 1);
 }, 200);
@@ -5,9 +6,10 @@ setTimeout(function () {
 const sr = ScrollReveal({
   origin: "top",
   distance: "80px",
-  duration: 2000,
+  duration: 1500,
   reset: true,
 });
+
 /* -- HOME -- */
 sr.reveal(".featured-text-card", {});
 sr.reveal(".featured-name", { delay: 100 });
@@ -23,12 +25,10 @@ sr.reveal(".project-box", { interval: 200 });
 sr.reveal(".top-header", {});
 
 /* -- ABOUT SKILLS & FORM BOX -- */
-
 sr.reveal(".about-info", {
   origin: "left",
   distance: "80px",
   delay: 100,
-  duration: 2000,
   reset: true,
 });
 sr.reveal(".skills-box", {
@@ -38,9 +38,7 @@ sr.reveal(".skills-box", {
   duration: 2000,
   reset: true,
 });
-
+sr.reveal(".logos", {});
 sr.reveal(".row", { delay: 300 });
-srRight.reveal(".contact-info", {});
-
-// sr.reveal(".skills-box", { delay: 100 });
-sr.reveal(".form-control", { delay: 100 });
+sr.reveal(".contact-info", { origin: "left" });
+sr.reveal(".form-control", { origin: "right" });

@@ -23,9 +23,14 @@ function headerShadow() {
     navHeader.style.lineHeight = "90px";
   }
 }
+
+// ---------- DUPLICATE LOGOS INFINITE LOOP --------
+var logosDuplicate = document.querySelector(".logos-slide").cloneNode(true);
+document.querySelector(".logos").appendChild(logosDuplicate);
+
 /* ----- TYPING EFFECT ----- */
 var typingEffect = new Typed(".typedText", {
-  strings: ["Junior web Developer"],
+  strings: ["Web Developer"],
   loop: true,
   typeSpeed: 100,
   backSpeed: 100,

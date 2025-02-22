@@ -1,19 +1,18 @@
 /* ----- POPPINS FONT Link ----- */
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
-
 /* ----- VARIABLES ----- */
 :root {
-  --body-color: rgb(250, 250, 250);
-  --color-white: rgb(255, 255, 255);
+  --body-color: #fafafa;
+  --color-white: #ffffff;
 
-  --text-color-second: rgb(68, 68, 68);
-  --text-color-third: rgb(30, 159, 171);
+  --text-color-second: #444444;
+  --text-color-third: #1e9fab;
 
-  --first-color: rgb(110, 87, 224);
-  --first-color-hover: rgb(40, 91, 212);
+  --first-color: #6e57e0;
+  --first-color-hover: #285bd4;
 
-  --second-color: rgb(0, 201, 255);
-  --third-color: rgb(192, 166, 49);
+  --second-color: #00c9ff;
+  --third-color: #c0a631;
   --first-shadow-color: rgba(0, 0, 0, 0.1);
 }
 
@@ -271,6 +270,68 @@ nav {
   font-size: 20px;
 }
 
+/* --------------- INFINITE LOGO ----------------- */
+@keyframes slide {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+.logos {
+  position: relative;
+  padding: 60px 0;
+  overflow: hidden;
+  white-space: nowrap;
+  background: var(--body-color);
+  margin-top: 55px;
+}
+.logos::before,
+.logos::after {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 250px;
+  height: 100%;
+  content: "";
+  z-index: 2;
+  background: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 0),
+    var(--body-color)
+  );
+}
+
+.logos:before {
+  left: 0;
+  background: linear-gradient(
+    to left,
+    rgba(255, 255, 255, 0),
+    var(--body-color)
+  );
+}
+
+.logos:hover .logos-slide {
+  animation-play-state: paused;
+}
+
+.logos-slide img:hover {
+  transform: scale(1.07);
+  transition: all ease-in-out 0.5s;
+}
+
+.logos-slide {
+  display: inline-block;
+  animation: 35s slide infinite linear;
+}
+
+.logos-slide img {
+  height: 70px;
+  margin: 0 40px;
+}
+
 /* ----- MAIN BOX ----- */
 .section {
   padding-block: 5em;
@@ -294,7 +355,6 @@ nav {
 .top-header h1 {
   font-weight: 600;
   color: var(--text-color-second);
-  margin-bottom: 10px;
 }
 .top-header span {
   color: #999;
@@ -323,6 +383,9 @@ h3 {
   text-align: center;
   font-size: 15px;
   color: #777;
+}
+.about-btn {
+  margin-top: 15px;
 }
 .about-btn button {
   position: absolute;
@@ -575,6 +638,7 @@ footer {
     justify-content: center;
     height: 100vh;
   }
+
   .featured-text {
     width: 100%;
     order: 2;
@@ -618,11 +682,38 @@ footer {
   .project-box {
     width: 80%;
   }
+  .about-btn {
+    margin-top: 15px;
+  }
+
+  /* lgos */
+  .logos-slide img {
+    height: 60px;
+    margin: 0 20px;
+  }
+  .logos::before,
+  .logos::after {
+    width: 150px;
+    height: 100%;
+    background: linear-gradient(
+      to right,
+      rgba(255, 255, 255, 0),
+      var(--body-color)
+    );
+  }
+
+  .logos:before {
+    background: linear-gradient(
+      to left,
+      rgba(255, 255, 255, 0),
+      var(--body-color)
+    );
+  }
 }
 
 /* ----- MEDIA QUERY == 540px / RESPONSIVE ----- */
 
-@media only screen and (max-width: 540px) {
+@media only screen and (max-width: 640px) {
   .featured-name {
     font-size: 40px;
   }
@@ -634,5 +725,15 @@ footer {
   }
   .input-field {
     width: 100%;
+  }
+
+  .about-btn {
+    margin-top: 15px;
+  }
+
+  /* logos */
+  .logos-slide img {
+    height: 40px;
+    margin: 0 20px;
   }
 }
