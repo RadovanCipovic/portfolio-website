@@ -70,5 +70,6 @@ function alertBtn() {
 
 // ------------------ PDF CV DOWNLOAD -----------------
 function openCV() {
-    window.open("assets/CVs/CV & certificate.pdf");
+    // let url = "https://files.fm/f/8rpwvxjfvr";
+    window.open("https://files.fm/f/8rpwvxjfvr");
 }
